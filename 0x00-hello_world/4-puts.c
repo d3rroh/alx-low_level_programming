@@ -1,6 +1,11 @@
 #include <stdio.h>
 
-/* main indicates the start of the code */
+/**
+ * main - Start of the code
+ *
+ * Return: zero on success
+ *
+ */
 
 int main(void)
 {
