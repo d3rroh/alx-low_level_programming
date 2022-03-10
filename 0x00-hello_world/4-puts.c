@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Prints the string provided in puts */
+/* main indicates the start of the code */
 
 int main(void)
 {
