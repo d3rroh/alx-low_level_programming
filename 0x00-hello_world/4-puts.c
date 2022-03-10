@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+/* Prints the string provided in puts */
+
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
