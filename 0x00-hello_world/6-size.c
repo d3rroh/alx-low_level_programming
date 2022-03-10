@@ -10,7 +10,7 @@
 int main(void)
 {
 	int intType;
-	int longIntType
+	int longIntType;
    	int floatType;
     	int longLongIntType;
     	int charType;
