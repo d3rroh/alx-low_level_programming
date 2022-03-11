@@ -11,12 +11,12 @@ int main(void)
 	int num = 48;
 	int hex = 97;
 
-	while(num < 58)
+	while (num < 58)
 	{
 		putchar(num);
 		num++;
 	}
-	while(hex < 103)
+	while (hex < 103)
 	{
 		putchar(hex);
 		hex++;
