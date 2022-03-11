@@ -21,8 +21,10 @@ int main(void)
 			letter++;
 		}
 		else
+		{
 			putchar(letter);
 			letter++;
+		}
 	}
 	putchar('\n');
 	return (0);
