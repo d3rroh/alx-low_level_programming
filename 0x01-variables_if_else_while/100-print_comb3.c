@@ -18,7 +18,7 @@ int main(void)
 			{
 				putchar(i);
 				putchar(j);
-				if ((i + j + k) < 168)
+				if ((j < '9') | (i < '8'))
 				{
 					putchar(',');
 					putchar(' ');
