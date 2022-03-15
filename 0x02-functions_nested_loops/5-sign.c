@@ -1,9 +1,9 @@
 #include "main.h"
 /**
-*
 * print_sign - returns if its lower or not
 * Return: returns zero according to answer
 */
+
 
 
 int print_sign(int n)
