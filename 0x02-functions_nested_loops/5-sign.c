@@ -2,6 +2,7 @@
 /**
 * print_sign - returns if its lower or not
 * Return: returns zero according to answer
+* @n: number to check for sign
 */
 
 
