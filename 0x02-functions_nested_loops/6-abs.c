@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-* @n: int to compute as absolute
 * _abs - returns if its lower or not
 * Return: returns zero according to answer
+* @n: number
 */
 
 
