@@ -2,8 +2,8 @@
 
 /**
  * add - add two ints
- * @a: first int to add
- * @b: second int to add
+ * @x: first int to add
+ * @y: second int to add
  * Return: sum of both ints
  **/
 
