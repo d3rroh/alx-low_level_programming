@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_last_digit - prints last digit
- * @n: number to compute last digit for
- * Return: last digit
+ * jack_bauer - prints last digit
+ * @void: first int to add
+ *
  **/
 
 
