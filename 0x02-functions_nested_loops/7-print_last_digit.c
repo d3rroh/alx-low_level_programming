@@ -1,14 +1,14 @@
 #include "main.h"
 /**
  * print_last_digit - prints last digit
- * @n: number to compute last digit for
+ * @num: number to compute last digit for
  * Return: last digit
  **/
 
 
 int print_last_digit(int num)
 {
-	num=num % 10;
+	num = num % 10;
 
 	if (num < 1)
 		num =- num;
