@@ -5,7 +5,7 @@
 * @size= number of times
 *
 *
-*/
+**/
 
 
 void print_square(int size)
