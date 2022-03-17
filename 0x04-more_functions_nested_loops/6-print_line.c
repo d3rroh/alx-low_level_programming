@@ -1,15 +1,14 @@
 #include "main.h"
-/**
-*  print_line- returns line
-*
-* @n= number of times
-*
-*/
 
+/**
+ * print_line - print a line
+ * @n: length of line
+ * Return: nothing
+ **/
 
 void print_line(int n)
 {
-	while (n>=1)
+	while (n >= 1)
 	{
 		_putchar('_');
 		n--;
