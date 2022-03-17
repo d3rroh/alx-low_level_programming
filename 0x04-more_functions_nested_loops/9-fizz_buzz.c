@@ -4,9 +4,7 @@
 *
 * Return: returns 0 0n success
 *
-*
 */
-
 
 int main(void)
 {
