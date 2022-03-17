@@ -1,22 +1,21 @@
 #include "main.h"
 
 /**
- * print_diagonal - prints diagonal line
- * @n: length of line
+ * print_square - print a square of input size
+ * @size: demensions of square
  * Return: nothing
  **/
 
-void print_diagonal(int n)
+void print_square(int size)
 {
 	int x, y;
 
-	for (y = 1; y <= n; y++)
+	for (y = 0; y < size; y++)
 	{
-		for (x = 1; x < y; x++)
-			_putchar(' ');
-		_putchar('\\');
+		for (x = 0; x < size; x++)
+			_putchar('#');
 		_putchar('\n');
 	}
-	if (n < 1)
+	if (size < 1)
 		_putchar('\n');
 }
