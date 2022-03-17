@@ -40,7 +40,7 @@ void print_number(int n)
 	}
 	while (place >= 0)
 	{
-		/*divisor = pow(10, place);*/
+
 		divisor = power(10, place);
 		digit = ((n / divisor) % 10);
 		if (digit == 0 && begin == 0)
