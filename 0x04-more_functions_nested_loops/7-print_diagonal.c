@@ -3,7 +3,7 @@
 *  print_diagonal- returns line
 *
 * @n= number of times
-*
+* Return: nothing
 *
 */
 
