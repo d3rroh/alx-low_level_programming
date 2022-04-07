@@ -28,19 +28,6 @@ void _print(char *str, int l)
 }
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
-/**
  * mul - multiplies a char with a string and places the answer into dest
  * @n: char to multiply
  * @num: string to multiply
