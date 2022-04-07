@@ -1,54 +1,67 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-/**
- * _strlen - returns the length of the string
- * @s: input string to count
- * Description: returns the length of a given string
- * Return: length of string as int
- **/
-int _strlen(char *s)
-{
-	unsigned int i;
 
-	if (s == NULL)
-		return (1);
-	for (i = 0; s[i] != '\0'; i++)
-		;
-	return (i + 1);
-}
 /**
- * string_nconcat - concatenate n chars of second string to first
- * @s1: first string
- * @s2: second string
- * @n: number of chars to concatenate
- * Description: concatenate two strings, return NULL if fails
- * Return: pointer to string, NULL if fails
- **/
+ * _strlen - gets string length
+ * @string: string
+ * Return: length (int)
+ */
+
+int _strlen(char *string)
+{
+	int length;
+
+	length = 0;
+	while (string[length] != '\0')
+	{
+		length++;
+	}
+	return (length);
+}
+
+/**
+ * string_nconcat - concatenates two strings
+ * @s1: string 1
+ * @s2: string 2
+ * @n: integer that determines whether entire s2 string will be used
+ * Return: pointer to allocated memory corresponding with the string
+ */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *dest;
-	unsigned int size1, size2, i, j;
+	unsigned int length1, length2, lengthc, i, j;
+	char *str;
 
-	size1 = _strlen(s1);
-	size2 = _strlen(s2);
-	if (n > size2 - 1)
-		n = size2 - 1;
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	length1 = _strlen(s1);
+	length2 = _strlen(s2);
 
-	dest = (char *)malloc((size1 + n) * sizeof(char));
-	if (dest == NULL)
-		return (NULL);
-	if (size1 == 1 && size2 == 1)
-		return (NULL);
-
-	for (i = 0; i < size1 - 1; i++)
-		dest[i] = s1[i];
-
-	for (j = 0; j <= n; j++)
+	if (n >= length2)
+		lengthc = length1 + length2 + 1;
+	else
 	{
-		dest[i + j] = s2[j];
+		lengthc = length1 + n + 1;
+		length2 = n;
 	}
-	dest[i + j] = '\0';
+	str = malloc(lengthc);
+	if (str == NULL)
+		return (NULL);
 
-	return (dest);
+	i = 0;
+	while (i < length1)
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	j = 0;
+	while (j < length2)
+	{
+		str[i + j] = s2[j];
+		j++;
+	}
+	str[i + j] = '\0';
+	return (str);
 }
