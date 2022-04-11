@@ -1,75 +1,51 @@
-#include "dog.h"
-#include <stdio.h>
 #include <stdlib.h>
-
+#include "dog.h"
 /**
- * _strdup - returns a pointer to a newly allocated space in memory
- * @str: string
- * Return: pointer to newly allocated space in memory
- */
-
-char *_strdup(char *str)
-{
-	int length, i;
-	char *arr;
-
-	if (str == NULL)
-	{
-		return (NULL);
-	}
-
-	length = 0;
-	while (*(str + length) != '\0')
-	{
-		length++;
-	}
-
-	arr = (char*) malloc(length * sizeof(char) + 1);
-	if (arr == NULL)
-		return (NULL);
-
-	for (i = 0; i < length; i++)
-	{
-		arr[i] = str[i];
-	}
-	arr[i] = '\0';
-
-	return (arr);
-}
-
-/**
- * new_dog - creates a new dog
- * @name: doggo's name
- * @age: doggo's age
- * @owner: doggo's owner
- * Return: new_dog (dog_t)
- */
-
+  *new_dog - creates a new dog
+  *@name: 1st member.
+  *@age: 2nd member.
+  *@owner: 3rd member.
+  *
+  *Return: NULL if fail.
+  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *doggo;
-	char *doggo_name, *doggo_owner;
+	int i, lenN, lenO;
 
-	doggo = malloc(sizeof(dog_t));
-	if (doggo == NULL)
-		return (NULL);
+	struct dog *n_dog = NULL;
 
-	doggo_name = _strdup(name);
-	if (doggo_name == NULL)
+	lenN = 0;
+	while (name[lenN] != '\0')
+		lenN++;
+	lenO = 0;
+	while (owner[lenO] != '\0')
+		lenO++;
+
+	n_dog = malloc(sizeof(struct dog));
+	if (n_dog == NULL)
 	{
-		free(doggo);
+		free(n_dog);
 		return (NULL);
 	}
-
-	doggo_owner = _strdup(owner);
-	if (doggo_owner == NULL)
+	n_dog->name = malloc(lenN + 1);
+	if (n_dog->name == NULL)
 	{
-		free(doggo_name);
-		free(doggo);
+		free(n_dog->name);
+		free(n_dog);
 		return (NULL);
 	}
-	doggo->name = doggo_name;
-	doggo->age = age;
-	doggo->owner = doggo_owner;
-	return (doggo);
+	n_dog->owner = malloc(lenO + 1);
+	if (n_dog->owner == NULL)
+	{
+		free(n_dog->name);
+		free(n_dog->owner);
+		free(n_dog);
+		return (NULL);
+	}
+	for (i = 0; i <= lenN; i++)
+		n_dog->name[i] = name[i];
+	for (i = 0; i <= lenO; i++)
+		n_dog->owner[i] = owner[i];
+	n_dog->age = age;
+	return (n_dog);
 }
